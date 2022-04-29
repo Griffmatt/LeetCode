@@ -1,0 +1,9 @@
+var isPalindrome = function(x) {
+     string =x.toString()
+    reversestring=[...string].reverse().join("")
+    for(i = 0; i< string.length; i++){
+if(string[i]!= reversestring[i])return false
+if(i+1 == string.length) return true
+}
+        
+};
