@@ -1,0 +1,7 @@
+    let h = []
+    for(i=0; i<nums.length; i++){
+        if(h.includes(nums[i])) return [h.indexOf(nums[i]), i]
+        
+        h.push(target-nums[i])
+    }
+};
