@@ -1,0 +1,27 @@
+var romanToInt = function(s) {
+    let h ={
+        "M": 1000,
+        "D": 500,
+        "C": 100,
+        "L": 50,
+        "X": 10,
+        "V": 5,
+        "I": 1,
+        "IV": 4,
+        "IX": 9,
+        "XL": 40,
+        "XC": 90,
+        "CD": 400,
+        "CM": 900  
+    }
+    let total = 0
+   for(i=0; i<s.length; i++){
+       if(s.slice(i, i+2) in h){
+           total += h[s.slice(i, i+2)]
+           i++
+       }else{
+           total += h[s[i]]
+       }
+   }
+        return total
+};
