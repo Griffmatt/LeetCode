@@ -1,0 +1,8 @@
+var addDigits = function(num) {
+    let numArr = Array.from(String(num), Number)
+    while(numArr.length >1){
+let number = numArr.reduce((a,b)=> a+b)
+        numArr=Array.from(String(number), Number)
+}
+    return numArr[0]
+};
