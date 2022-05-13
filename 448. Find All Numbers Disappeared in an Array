@@ -1,0 +1,19 @@
+var findDisappearedNumbers = function(nums) {
+
+    let arr = []
+    arr.length = nums.length
+    let answer = []
+    for (let i = 0; i < nums.length; i++){
+        arr[nums[i]-1] = nums[i]
+    }
+    
+    
+    for (let i = 0; i < arr.length; i++){
+        if(!arr[i]){
+            answer.push(i+1)
+        }
+    }
+
+    
+    return answer
+};
