@@ -1,0 +1,13 @@
+var intersection = function(nums) {
+    let answer = []
+    if(nums.length === 1) return nums[0].sort((a, b)=> a-b)
+   for(i=0; i<nums[0].length; i++){
+       for(x=1; x< nums.length; x++){
+           if(!nums[x].includes(nums[0][i])) break
+           if(x===nums.length-1) answer.push(nums[0][i])
+       }
+    
+   }
+    
+    return answer.sort((a, b)=> a-b)
+};
