@@ -1,0 +1,10 @@
+var removeDigit = function(number, digit) {
+    let removedDigit = []
+    number.split("").forEach((num, index)=> {
+        let nums = number.split("")
+        nums.splice(index, 1)
+        if(num===digit) {removedDigit.push(nums.join(""))}
+})
+    removedDigit = removedDigit.sort().reverse()
+    return removedDigit[0]
+};
