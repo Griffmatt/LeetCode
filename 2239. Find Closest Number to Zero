@@ -1,0 +1,7 @@
+var findClosestNumber = function(nums) {
+    nums.push(0)
+    nums = nums.sort((a, b) => a-b)
+    let index = nums.indexOf(0)
+    if(index===nums.length-1) return nums[index-1]
+    return (nums[index-1] + nums[index+1] > 0)? nums[index-1]:  nums[index+1]
+};
