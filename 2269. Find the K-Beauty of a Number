@@ -1,0 +1,9 @@
+var divisorSubstrings = function(num, k) {
+    let numArr = Array.from(String(num).split(""));
+  let counter = 0
+    for(i=0; i<numArr.length-(k-1); i++){
+      let divisor = Number(numArr.slice(i, k+i).join(""))
+      if(num%divisor===0) counter++
+    }
+  return counter
+};
