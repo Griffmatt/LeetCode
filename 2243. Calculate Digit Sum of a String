@@ -1,0 +1,14 @@
+var digitSum = function(s, k) {
+    
+    
+    
+    while(s.length>k){
+        let answers =""
+        for(i=0; i<s.length; i+=k){
+            answers+=eval(s.substring(i, k+i).split("").join("+"))
+        }
+        s = answers
+    }
+    
+    return s
+};
