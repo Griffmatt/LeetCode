@@ -1,0 +1,7 @@
+var largestGoodInteger = function(num) {
+    for(i=9; i > -1; i--){
+        let number = `${i}${i}${i}`
+        if(num.indexOf(number)>-1) return number
+    }
+    return ""
+};
