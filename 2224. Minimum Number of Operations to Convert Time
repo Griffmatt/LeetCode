@@ -1,0 +1,34 @@
+var convertTime = function(current, correct) {
+    let currentTime= current.split(":")
+    let currentHour = Number(currentTime[0])
+    let currentMinute = Number(currentTime[1])
+    let correctTime= correct.split(":")
+    let correctHour = Number(correctTime[0])
+    let correctMinute = Number(correctTime[1])
+    
+    let ops = 0
+    
+    while(currentMinute !== correctMinute){
+        ops++
+        if(correctMinute < currentMinute){
+            currentMinute -=60
+            currentHour++
+        }
+        if((correctMinute-currentMinute) >= 15){
+            currentMinute += 15
+            continue
+        }
+        if((correctMinute-currentMinute) >=5){
+            currentMinute += 5
+            continue
+        }
+        currentMinute += 1   
+    }
+    
+    while(currentHour !== correctHour){
+        currentHour++
+        ops++
+    }
+    
+    return ops
+};
