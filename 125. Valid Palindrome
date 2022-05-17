@@ -1,0 +1,12 @@
+var isPalindrome = function(s) {
+  let letters = s.toLowerCase().replace(/[^a-z0-9]/g, "")
+  let n = letters.length-1
+  for(i=0; i<n; i++){
+      if(letters[i] !== letters[n]){
+          return false
+      }
+      n--
+  }
+return true
+    
+};
