@@ -1,0 +1,15 @@
+var mostFrequent = function(nums, key) {
+    let after = []
+    nums.forEach((num, index)=>{
+        if(nums[index-1] === key){
+        after.push(num)
+    }})
+  
+    
+    after = after.sort((a, b) => a-b)
+    while(after.length>1){
+        after = after.filter((number, index) => number === after[index+1])
+    }
+    
+    return after
+};
