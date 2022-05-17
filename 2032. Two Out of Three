@@ -1,0 +1,25 @@
+var twoOutOfThree = function(nums1, nums2, nums3) {
+    let answer = []
+    for(i=0; i<nums1.length; i++){
+        
+        if(nums2.includes(nums1[i])){
+            answer.push(nums1[i])
+            continue
+        }
+        if(nums3.includes(nums1[i])){
+            answer.push(nums1[i])
+            continue
+        }
+    }
+    
+    for(i=0; i<nums2.length; i++){
+        
+        if(nums3.includes(nums2[i])){
+            answer.push(nums2[i])
+            continue
+        }
+      
+    }
+    answer = answer.sort((a, b)=> a-b)
+    return answer.filter((number, index)=> number !== answer[index+1])
+};
