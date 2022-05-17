@@ -1,0 +1,20 @@
+var findKDistantIndices = function(nums, key, k) {
+    let arr = []
+    let keys = []
+    for(j = 0; j<nums.length; j++){
+        if(nums[j]===key){
+            keys.push(j)
+        }
+    }
+    
+    for(i = 0; i<nums.length; i++){
+        for(j=0; j<keys.length; j++){
+            if(Math.abs(i-keys[j]) <= k){
+                arr.push(i)
+                break
+            }
+        }
+    }
+    
+    return arr
+};
