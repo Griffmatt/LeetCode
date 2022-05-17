@@ -1,0 +1,16 @@
+var largestInteger = function(num) {
+    let numArr = String(num).split("").map(Number)
+    for(i=0; i<numArr.length; i++){
+        for(x=i+1; x<numArr.length; x++){
+            let dif = numArr[i] - numArr[x]
+            if(numArr[x]%2!==numArr[i]%2){
+                continue
+            }
+            if(dif<0){
+                numArr[i] -= dif
+                numArr[x] += dif
+            }
+        }
+    }
+    return Number(numArr.join(""))
+};
