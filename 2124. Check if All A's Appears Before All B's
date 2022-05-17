@@ -1,0 +1,12 @@
+var checkString = function(s) {
+    let hitB = false
+    
+    for(i=0; i< s.length; i++){
+        if(s[i] === "b"){
+            hitB = true
+            continue
+        }
+        if(hitB) return false
+    }
+    return true
+};
