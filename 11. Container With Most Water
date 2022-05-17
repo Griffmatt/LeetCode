@@ -1,0 +1,18 @@
+var maxArea = function(height) {
+    let n = height.length-1
+    let highest = 0
+    
+    for(i=0; i<n; i++){
+            let amount = Math.min(height[i], height[n]) * (n-i)
+            if(amount > highest){
+                highest = amount
+            }
+        if(height[i]>height[n]){
+            n--
+            i--
+            continue
+        }
+    }
+    
+    return highest
+};
