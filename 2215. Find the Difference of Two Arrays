@@ -1,0 +1,6 @@
+var findDifference = function(nums1, nums2) {
+  
+    let nums3 = nums1.filter((number, index)=> !nums2.includes(number) && !nums1.slice(index+1).includes(number)) 
+    let nums4 = nums2.filter((number, index)=> !nums1.includes(number)&& !nums2.slice(index+1).includes(number)) 
+    return [nums3, nums4]
+};
