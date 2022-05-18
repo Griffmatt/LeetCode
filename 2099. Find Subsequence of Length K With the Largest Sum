@@ -1,0 +1,12 @@
+var maxSubsequence = function(nums, k) {
+  let answer = nums.slice(0, k)
+  for(i=k; i < nums.length; i++){
+    if(nums[i] > Math.min(...answer)){
+
+      answer.splice(answer.indexOf(Math.min(...answer)), 1)
+
+      answer.push(nums[i])
+    }
+  }
+    return answer
+};
