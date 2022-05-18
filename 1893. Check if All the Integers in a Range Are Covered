@@ -1,0 +1,17 @@
+var isCovered = function(ranges, left, right) {
+    let arr = []
+    
+    for(i=left; i<right+1; i++){
+        arr.push(i)
+    }
+    for(i=0; i<ranges.length; i++){
+        for(j=0; j< arr.length; j++){
+            if(ranges[i][0]<=arr[j] && arr[j]<= ranges[i][1]){
+                arr.splice(j, 1)
+              j--
+            }
+        if(arr.length===0) return true
+        }
+    }
+    return false
+};
