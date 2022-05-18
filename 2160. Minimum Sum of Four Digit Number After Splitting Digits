@@ -1,0 +1,10 @@
+var minimumSum = function(num) {
+  let arr=[[], []]
+    let numArr = num.toString().split("").map(Number).sort((a,b)=> a-b)
+    numArr.forEach((number, index)=>{
+      if(index%2===0){
+        arr[0] = (arr[0]*10+number)
+      }else{arr[1] = (arr[1]*10+number)}
+    })
+  return (arr.reduce((a,b)=> a+b))
+};
