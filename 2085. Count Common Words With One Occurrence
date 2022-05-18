@@ -1,0 +1,17 @@
+var countWords = function(words1, words2) {
+    let arr = []
+    let unique1 = words1.filter(value => {
+    return words1.indexOf(value) === words1.lastIndexOf(value);
+  });
+    let unique2 = words2.filter(value => {
+    return words2.indexOf(value) === words2.lastIndexOf(value);
+  });
+    
+    for(i=0; i<unique1.length; i++){
+        if(unique2.includes(unique1[i])){
+            arr.push(unique1[i])
+        }
+    }
+    
+    return arr.length
+};
