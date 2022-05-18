@@ -1,0 +1,22 @@
+var sortEvenOdd = function(nums) {
+    let odd = []
+    let even = []
+    let answer=[]
+    for(i=0; i<nums.length; i++){
+        if((i%2===0)){
+            even.push(nums[i])
+            continue
+        }
+        odd.push(nums[i])
+    }
+    even.sort((a, b)=> a-b)
+    odd.sort((a, b)=> a-b).reverse()
+    
+    for(i=0; i< even.length; i++){
+        answer.push(even[i])
+        if(odd[i]){
+        answer.push(odd[i])}
+    }
+    
+    return answer
+};
