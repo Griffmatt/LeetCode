@@ -1,0 +1,6 @@
+var thirdMax = function(nums) {
+    let numSet =  [...new Set(nums)].sort((a, b)=> a-b).reverse()
+    
+    return isNaN(numSet[2])? numSet[0]:numSet[2]
+    
+};
