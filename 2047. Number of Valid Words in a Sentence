@@ -1,0 +1,26 @@
+var countValidWords = function(sentence) {
+    sentence = sentence.split(" ")
+    let count = 0
+    
+    for(i=0; i< sentence.length; i++){
+        if(sentence[i] === "") continue
+        if(sentence[i].endsWith(".")||sentence[i].endsWith(",")||sentence[i].endsWith("!")){
+              sentence[i]=sentence[i].slice(0, -1)                                             
+        }
+        if(sentence[i].includes("-")){
+            let word = sentence[i]
+            let index = word.indexOf("-")
+            if(word.startsWith("-")||word.endsWith("-")) continue
+            if(index !==  word.lastIndexOf("-")) continue
+            if(word[index-1].replace(/[^a-z]/g, "") ===word[index-1] &&word[index+1].replace(/[^a-z]/g, "") ===word[index+1]){
+                sentence[i] = sentence[i].replace(/[-]/g,"")
+     
+            }
+        }
+        if(sentence[i].replace(/[0-9-!.,]/g, "")===sentence[i]){
+            count++
+  
+        }
+    }
+    return count
+};
