@@ -1,0 +1,18 @@
+var firstPalindrome = function(words) {
+    
+    for(i=0; i<words.length; i++){
+       let isPalindrome = true
+       let n = words[i].length-1
+       for(j=0; j<n; j++){
+           if(words[i][j] === words[i][n]){
+               n--
+               continue
+           }
+           isPalindrome = false
+           break
+       }
+        if(isPalindrome) return words[i]
+        
+    }
+    return ""
+};
