@@ -1,0 +1,11 @@
+var divideString = function(s, k, fill) {
+   let arr =[]
+    while(s.length%k !==0){
+        s+=fill
+    }
+    for(i=0; i < s.length; i+=k){
+        arr.push(s.slice(i, k+i))
+    }
+    
+    return arr
+};
