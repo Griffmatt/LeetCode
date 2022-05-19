@@ -1,0 +1,18 @@
+var countVowelSubstrings = function(word) {
+  word = word.split(/[^aeiou]/g).filter(letters => new Set(letters).size === 5)
+  let count = 0
+  
+  for(let letters of word){
+    let length = letters.length
+    for(j=0; j < length; j++){
+      if(new Set(letters.slice(j, length)).size === 5){
+        count++
+        length--
+        j--
+        continue
+      }
+      length = letters.length
+    }
+  }
+  return count
+};
