@@ -1,0 +1,13 @@
+var maxDistance = function(colors) {
+    let n = colors.length-2
+    let x = colors.length-1
+    let i = 1
+    if(colors[0] !== colors[x]) return x
+    while(colors[0] === colors[i]){
+        i++
+    }
+    while(colors[n] === colors[x]){
+        n--
+    }
+return Math.max(n, x-i)
+};
