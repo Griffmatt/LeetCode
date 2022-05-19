@@ -1,0 +1,6 @@
+var countOdds = function(low, high) {
+    let dif = high-low
+    if(high % 2 === 0) return Math.ceil(dif/2)
+    
+    return Math.floor(dif/2+1)
+};
