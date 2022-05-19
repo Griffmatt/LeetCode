@@ -1,0 +1,11 @@
+var countPoints = function(rings) {
+    let count = 0
+  
+    for(i=0; i<10; i++){
+        if(!rings.includes(`R${i}`)) continue
+        if(!rings.includes(`G${i}`)) continue
+        if(rings.includes(`B${i}`)) count++
+    }
+    
+    return count
+};
