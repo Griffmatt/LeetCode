@@ -1,0 +1,20 @@
+var findEvenNumbers = function(digits) {
+    let answerArr= []
+    
+    for(i=0; i<digits.length; i++){
+        if(digits[i]%2 !== 0) continue
+         for(x=0; x<digits.length; x++){
+             if(x===i) continue
+         for(j=0; j<digits.length; j++){
+             if(j===i||j===x)continue
+             if(digits[j] === 0) continue
+             let num = (digits[i])+(digits[x]*10) + digits[j]*100
+             if(answerArr.includes(num)) continue
+             answerArr.push(num)
+
+    }
+    }
+    }
+
+    return answerArr.sort((a, b) => a-b)
+}
