@@ -1,0 +1,11 @@
+var countElements = function(nums) {
+    let max = Math.max(...nums)
+     let min = Math.min(...nums)
+     let count = 0
+     
+     nums.forEach(num=>{
+         if(num > min && num < max) count++
+     })
+    
+    return count
+};
