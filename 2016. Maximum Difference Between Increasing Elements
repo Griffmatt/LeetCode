@@ -1,0 +1,10 @@
+var maximumDifference = function(nums) {
+   let answer = -1
+   for(i=0; i<nums.length-1; i++){
+       if(nums[i]>=nums[i+1]) continue
+       let dif = Math.max(...nums.slice(i)) - nums[i]
+       if(dif > answer) answer = dif
+   }
+    
+    return answer
+};
