@@ -1,7 +1,10 @@
 var areNumbersAscending = function(s) {
-    s = s.split(" ").filter(number => !isNaN(number))
+    s = s.split(" ")
+    let prev = 0
     for(i=0; i<s.length; i++){
-      if(Number(s[i])>=Number(s[i+1])) return false
+        if(isNaN(s[i])) continue
+      if(Number(s[i])<=Number(prev)) return false
+        prev = s[i]
     }
   return true
 };
