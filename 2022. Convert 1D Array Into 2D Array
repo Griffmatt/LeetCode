@@ -1,0 +1,13 @@
+var construct2DArray = function(original, m, n) {
+    if(m*n !== original.length) return []
+    let answer = new Array(m).fill(0).map(arr => new Array(n).fill(0))
+    let count = 0
+    for(i=0; i<m; i++){
+        for(j=0; j<n; j++){
+            answer[i][j] = original[count]
+            count++
+        }
+    }
+    
+    return answer
+};
