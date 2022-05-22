@@ -1,0 +1,14 @@
+var findGCD = function(nums) {
+    let max = Math.max(...nums)
+    let min = Math.min(...nums)
+    let oldMax = 0
+
+    while(max !== 0){
+       oldMax = max
+
+        max = min % max
+        min = oldMax
+        
+    }
+    return min
+}
