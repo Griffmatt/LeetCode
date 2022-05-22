@@ -1,0 +1,19 @@
+var cellsInRange = function(s) {
+    let answer = []
+    let start = s.charCodeAt(0)
+    let startNum = Number(s[1])
+    let end = s.charCodeAt(3)
+    let endNum = Number(s[4])
+    
+    while(start<= end){
+        
+        while(startNum<= endNum){
+            answer.push(`${String.fromCharCode(start)}${startNum}`)
+            startNum++
+        }
+        start++
+        startNum = Number(s[1])
+    }
+    
+    return answer
+    
