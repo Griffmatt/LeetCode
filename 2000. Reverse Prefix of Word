@@ -1,0 +1,11 @@
+var reversePrefix = function(word, ch) {
+    if(!word.includes(ch)) return word
+    let count = 0
+    let answer = ""
+    while(word[count-1] !== ch){
+        answer = word[count]+answer
+        count++
+        
+    }
+ return answer+word.slice(count)   
+}
