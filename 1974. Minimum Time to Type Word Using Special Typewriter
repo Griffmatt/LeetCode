@@ -1,0 +1,16 @@
+var minTimeToType = function(word) {
+    let alph = "abcdefghijklmnopqrstuvwxyz"
+    let prev = alph.indexOf('a')
+    let count = 0
+    let indexes = word.split("").map(w => alph.indexOf(w))
+    for(i=0; i<word.length; i++){
+        let dif =  Math.abs(prev-indexes[i])
+        if(dif > 13){
+            dif = 26-dif
+        }
+        prev = indexes[i]
+        count +=dif+1
+    }
+    
+    return count
+};
