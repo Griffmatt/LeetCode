@@ -1,0 +1,10 @@
+var largestOddNumber = function(num) {
+    let length = num.length-1
+    
+    while(Number(num[length])%2 ===0){
+        if(length===0) return ""
+        length--
+    }
+    
+    return num.slice(0, length+1)
+};
