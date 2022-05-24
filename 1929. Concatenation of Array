@@ -1,0 +1,15 @@
+var getConcatenation = function(nums) {
+    let i = 0
+    let answer = []
+    while(answer.length < nums.length*2){
+        answer.push(nums[i])
+        if(i===nums.length-1){
+            i=0
+            continue
+        }
+        i++
+    }
+    
+    return answer
+        
+};
