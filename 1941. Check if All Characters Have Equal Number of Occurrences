@@ -1,0 +1,10 @@
+var areOccurrencesEqual = function(s) {
+    s = s.split("").sort().join("").match(/(.)\1*/g)
+    let length = s[0].length
+    for(i=1; i<s.length; i++){
+        if(length===s[i].length) continue
+        return false
+    }
+    return true
+    
+};
