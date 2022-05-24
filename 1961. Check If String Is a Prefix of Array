@@ -1,0 +1,13 @@
+var isPrefixString = function(s, words) {
+    let word = words[0]
+   
+    for(i=1; i<words.length+1; i++){
+        if(word === s) return true
+        if(s.startsWith(word)){
+            word += words[i]
+            continue
+        }
+        return false
+    }
+    return false
+};
