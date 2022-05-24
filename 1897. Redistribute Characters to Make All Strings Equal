@@ -1,0 +1,7 @@
+var makeEqual = function(words) {
+    if(words.length % 2 === 0){
+        let set = new Set(words.join("").split(""))
+    }
+    words = words.join("").split("")
+    
+};
