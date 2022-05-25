@@ -1,0 +1,7 @@
+var isSumEqual = function(firstWord, secondWord, targetWord) {
+   let first = firstWord.split("").map(letter => letter.charCodeAt(0)-97).join("")
+   let second  = secondWord.split("").map(letter => letter.charCodeAt(0)-97).join("")
+   let ans = targetWord.split("").map(letter => letter.charCodeAt(0)-97).join("")
+   
+   return Number(first)+Number(second) === Number(ans)
+};
