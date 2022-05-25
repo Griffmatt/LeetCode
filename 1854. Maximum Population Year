@@ -1,0 +1,13 @@
+var maximumPopulation = function(logs) {
+    let years = Array(100).fill(0)
+    
+    for(i=0; i<logs.length; i++){
+        let x = logs[i][0]-1950
+        let y = logs[i][1]-1950
+        while(x<y){
+            years[x]++
+            x++
+        }
+    }
+    return (years.indexOf(Math.max(...years))+1950)
+};
