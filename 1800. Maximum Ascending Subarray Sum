@@ -1,0 +1,15 @@
+var maxAscendingSum = function(nums) {
+    let high = 0
+    for(i=0; i<nums.length; i++){
+        let sum = nums[i]
+        
+        while(nums[i]< nums[i+1]){
+            sum+=nums[i+1]
+            i++
+        }
+        
+    high = Math.max(sum , high)
+    }
+    
+    return high
+};
