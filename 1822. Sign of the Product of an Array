@@ -1,0 +1,7 @@
+var arraySign = function(nums) {
+    if(nums.includes(0)) return 0
+    
+    nums = nums.filter(num => num<0)
+    
+    return nums.length %2 === 0? 1: -1
+};
