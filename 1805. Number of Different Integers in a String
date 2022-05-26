@@ -1,0 +1,5 @@
+var numDifferentIntegers = function(word) {
+    let number = word.match(/[^a-z]+/gi)
+    if(number === null) return 0
+    return new Set(number.map(n => n. replace(/^0+/, ''))).size
+};
