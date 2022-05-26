@@ -1,0 +1,15 @@
+function minOperations(nums) {
+  let p1 = 1;
+  let count = 0;
+
+  while (p1 < nums.length) {
+    if (nums[p1] <= nums[p1 - 1]) {
+      nums[p1]++;
+      count++;
+    } else if (nums[p1] > nums[p1 - 1]) {
+      p1++;
+    }
+  }
+
+  return count;
+}
