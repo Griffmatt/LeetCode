@@ -1,0 +1,5 @@
+var squareIsWhite = function(coordinates) {
+    let num = coordinates.charCodeAt(0)-97+Number(coordinates[1])
+    
+    return num %2 === 0
+};
