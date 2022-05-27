@@ -1,0 +1,6 @@
+var countMatches = function(items, ruleKey, ruleValue) {
+   let arr = ["type", "color", "name"] 
+   let index = arr.indexOf(ruleKey)
+   
+   return items.filter(item => item[index] === ruleValue).length
+};
