@@ -1,0 +1,24 @@
+var nearestValidPoint = function(x, y, points) {
+    let low = -1
+    let sum = Infinity
+    let i = 0
+    
+    for(let point of points){
+        let dis = Infinity
+        if(x === point[0]){
+            dis = Math.abs(y-point[1])
+        }
+        if(y === point[1]){
+            dis = Math.abs(x-point[0])
+        }
+        
+        if( dis < sum){
+            sum = dis
+            low = i
+        }
+        
+        i++
+        
+    }
+    return low
+};
