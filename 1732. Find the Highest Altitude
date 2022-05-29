@@ -1,0 +1,10 @@
+var largestAltitude = function(gain) {
+   let alt = 0
+   let max = 0
+   for(let a of gain){
+       alt+=a
+       max = Math.max(alt, max)
+   }
+    
+    return max
+};
