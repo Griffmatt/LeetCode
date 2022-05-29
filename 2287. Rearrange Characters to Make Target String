@@ -1,0 +1,15 @@
+var rearrangeCharacters = function(s, target) {
+    let count =0
+    let i = 0
+    s = s.split("")
+    while(s.includes(target[i])){
+s.splice(s.indexOf(target[i]), 1)
+        i++
+        if(i===target.length){
+i=0
+            count++
+}
+}
+    
+    return count 
+};
