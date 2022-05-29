@@ -1,0 +1,9 @@
+var digitCount = function(num) {
+    let numArr = new Array(num.length).fill(0)
+    
+    for(i=0; i<num.length; i++){
+        numArr[num[i]]++
+    }
+    
+    return numArr.join("") === num
+};
