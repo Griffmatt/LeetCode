@@ -1,0 +1,5 @@
+var sumOfUnique = function(nums) {
+    nums =  nums.filter((num , index)=> !nums.slice(0, index).includes(num) && !nums.slice(index+1).includes(num))
+    
+    return nums.length > 0? nums.reduce((a, b)=> a+b): 0
+};
