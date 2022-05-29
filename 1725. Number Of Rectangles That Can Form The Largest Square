@@ -1,0 +1,5 @@
+var countGoodRectangles = function(rectangles) {
+let squares = rectangles.map(r => Math.min(...r))
+let maxLen = Math.max(...squares)
+return squares.filter(s => s===maxLen).length
+}
