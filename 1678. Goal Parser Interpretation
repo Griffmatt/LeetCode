@@ -1,0 +1,13 @@
+var interpret = function(command) {
+    let answer = ""
+    
+    for(i=0; i<command.length; i++){
+        if(command[i]==="G") answer+="G"
+        if(command[i]==="("){
+            if(command[i+1]==="a") answer+="al"
+            if(command[i+1]===")") answer+="o"
+        }
+    }
+    
+    return answer
+};
