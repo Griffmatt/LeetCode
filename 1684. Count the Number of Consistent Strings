@@ -1,0 +1,15 @@
+var countConsistentStrings = function(allowed, words) {
+    let set = new Set(allowed)
+    let count = 0
+    
+    for(let word of words){
+        let wordSet = new Set(word)
+        
+        for(i=0; i<wordSet.size; i++){
+            if(!set.has([...wordSet][i])) break
+            if(i+1 === wordSet.size) count++
+        }
+    }
+    
+    return count
+};
