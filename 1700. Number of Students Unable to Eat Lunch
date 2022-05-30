@@ -1,0 +1,11 @@
+var countStudents = function(students, sandwiches) {
+    for(i=0; i<sandwiches.length; i++){
+        if(students.includes(sandwiches[i])){
+            students.splice(students.indexOf(sandwiches[i]), 1)
+            continue
+        }
+        return students.length
+    }
+    
+    return 0
+};
