@@ -1,0 +1,17 @@
+var minMaxGame = function(nums) {
+    while(nums.length > 1){
+        let hold = []
+        
+        for(i=0; i<nums.length/2; i++){
+            if(i%2===0){
+                hold.push(Math.min(nums[2 * i], nums[2 * i + 1]))
+                continue
+            }
+            
+            hold.push(Math.max(nums[2 * i], nums[2 * i + 1]))
+        }
+        nums=hold
+    }
+    
+    return nums[0]
+};
