@@ -1,0 +1,26 @@
+var trap = function(height) {
+    let total = 0
+    
+    for(i=0; i<height.length; i++){
+        let x = i+1
+        if(height[i]>height[x]){
+            let dif = 0
+            while(height[i]>height[x]){
+                dif+=height[i]-height[x]
+                x++
+            }
+            
+            if(x<height.length){
+                total+=dif
+                i=x-1
+            }else{
+                height[i]-=1
+                i--
+                
+            }
+            
+        }
+    }
+    
+    return total
+};
