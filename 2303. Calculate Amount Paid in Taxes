@@ -1,0 +1,16 @@
+var calculateTax = function(brackets, income) {
+    let tax = 0
+    let moneyUsed = 0    
+    for(i=0; i<brackets.length; i++){
+        if(income>brackets[i][0]){
+            tax += (brackets[i][0]-moneyUsed)*(brackets[i][1]/100)
+            moneyUsed = brackets[i][0]
+            continue
+        }
+        
+        tax += (income-moneyUsed)*(brackets[i][1]/100)
+        break
+        
+    }
+    return tax
+};
