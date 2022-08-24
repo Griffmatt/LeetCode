@@ -1,0 +1,13 @@
+var minimumRecolors = function(blocks, k) {
+    let answer = Infinity
+    for(let i=0; i < blocks.length-k+1; i++){
+        let x = 0
+        for(j=i; j<i+k; j++){
+            if(blocks[j]==="W") x++
+        }
+        answer = Math.min(x, answer)
+        if(x===0) return 0
+    }
+    console.log(answer)
+    return answer
+};
